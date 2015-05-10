@@ -10,7 +10,10 @@
             android:text="ЩЕЛБАН?"
             />
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content"
-            android:text="ДА!!!"
+            android:text="ЩЁЛК!!!"
             android:onClick="click1"/>
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:text="СИНИЙ"
+        android:onClick="clickBlue"/>
 </LinearLayout>
 

@@ -12,7 +12,8 @@ import java.util.HashMap;
 public class MyActivity extends Activity {
     SoundPool soundPool;
     HashMap<Integer, Integer> soundPoolMap;
-    int soundID = 1;
+    int CLICK = 1;
+    int BLUE = 2;
 
     /**
      * Called when the activity is first created.
@@ -24,11 +25,18 @@ public class MyActivity extends Activity {
 
         soundPool = new SoundPool(4, AudioManager.STREAM_MUSIC, 100);
         soundPoolMap = new HashMap<Integer, Integer>();
-        soundPoolMap.put(soundID, soundPool.load(this, R.raw.sndclick1, 1));
+
+        soundPoolMap.put(CLICK, soundPool.load(this, R.raw.sndclick1, 1));
+        soundPoolMap.put(BLUE, soundPool.load(this, R.raw.blue, 1));
     }
 
     public void click1(View view) {
-
+        sound(CLICK);
+    }
+    public void clickBlue(View view) {
+        sound(BLUE);
+    }
+    void sound(int id){
         //view.setEnabled(false);
 
         AudioManager audioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
@@ -39,7 +47,7 @@ public class MyActivity extends Activity {
         int priority = 1;
         int no_loop = 0;
         float normal_playback_rate = 1f;
-        soundPool.play(soundID, leftVolume, rightVolume, priority, no_loop, normal_playback_rate);
+        soundPool.play(id, leftVolume, rightVolume, priority, no_loop, normal_playback_rate);
 
     }
 }
