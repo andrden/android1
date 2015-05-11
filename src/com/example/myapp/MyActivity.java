@@ -14,7 +14,8 @@ public class MyActivity extends Activity {
     HashMap<Integer, Integer> soundPoolMap;
     int CLICK = 1;
     int BLUE = 2;
-
+    int RED= 3;
+    int GREEN=4;
     /**
      * Called when the activity is first created.
      */
@@ -28,6 +29,11 @@ public class MyActivity extends Activity {
 
         soundPoolMap.put(CLICK, soundPool.load(this, R.raw.sndclick1, 1));
         soundPoolMap.put(BLUE, soundPool.load(this, R.raw.blue, 1));
+        soundPoolMap.put(RED, soundPool.load(this, R.raw.red, 1));
+        soundPoolMap.put(GREEN
+                , soundPool.load(this, R.raw.green, 1));
+
+
     }
 
     public void click1(View view) {
@@ -36,6 +42,22 @@ public class MyActivity extends Activity {
     public void clickBlue(View view) {
         sound(BLUE);
     }
+
+    public void GREEN1(View view) {
+        sound(GREEN);
+    }
+    public void clickrad(View view) {
+        sound(RED);
+    }
+
+
+
+
+
+
+
+
+
     void sound(int id){
         //view.setEnabled(false);
 

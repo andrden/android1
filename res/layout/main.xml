@@ -15,5 +15,12 @@
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content"
         android:text="СИНИЙ"
         android:onClick="clickBlue"/>
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:text="красный!!!"
+        android:onClick="clickrad"/>
+    <Button android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:text="зелоный"
+        android:onClick="GREEN1"/>
+
 </LinearLayout>
 
