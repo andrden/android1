@@ -69,7 +69,7 @@ public class MyActivity extends Activity {
         int priority = 1;
         int no_loop = 0;
         float normal_playback_rate = 1f;
-        soundPool.play(id, leftVolume, rightVolume, priority, no_loop, normal_playback_rate);
+        soundPool.play(soundPoolMap.get(id), leftVolume, rightVolume, priority, no_loop, normal_playback_rate);
 
     }
 }
